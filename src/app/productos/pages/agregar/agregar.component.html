@@ -13,8 +13,7 @@
         </div>
 
         <div class="col-auto">
-            <span class="form-text" *ngIf="tieneError('nombre')" error-msg [color]="color">
-              Campo requerido
+            <span *ngIf="tieneError('nombre')" error-msg>
             </span>
         </div>
     </div>
