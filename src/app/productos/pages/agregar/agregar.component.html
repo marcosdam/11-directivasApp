@@ -13,7 +13,8 @@
         </div>
 
         <div class="col-auto">
-            <span class="form-text" *ngIf="tieneError('nombre')" error-msg>
+            <span class="form-text" *ngIf="tieneError('nombre')" error-msg [color]="color">
+              Campo requerido
             </span>
         </div>
     </div>
@@ -28,6 +29,5 @@
 
 
 <h3 class="mt-5">Formulario</h3>
-
 <pre>Valid: {{ miFormulario.valid }} </pre>
 <pre>Value: {{ miFormulario.value }} </pre>
