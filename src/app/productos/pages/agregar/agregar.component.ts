@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AgregarComponent {
 
   color: string = 'green';
+  texto1: string = 'Marcos';
 
   miFormulario: FormGroup = this.fb.group({
     nombre: [ '', Validators.required ]
@@ -19,6 +20,14 @@ export class AgregarComponent {
 
   tieneError( campo: string ): boolean {
     return this.miFormulario.get( campo )?.invalid || false;
+  }
+
+  cambiarNombre() {
+    this.texto1 = 'Pepe'
+  }
+
+  cambiarColor() {
+    this.color = 'green';
   }
 
 }
